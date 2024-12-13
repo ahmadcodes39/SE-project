@@ -1,0 +1,70 @@
+﻿<UserControl x:Class="ParkingSpace.Components.SideBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ParkingSpace.Components"
+             xmlns:fa="clr-namespace:FontAwesome.WPF;assembly=FontAwesome.WPF"
+             mc:Ignorable="d" 
+             d:DesignHeight="150" d:DesignWidth="800">
+    <Grid Background="#355167">
+        <!-- Main Header Layout -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0,0,0">
+            <Label Content="ParkNow"
+                   Padding="0,20,0,20"
+                   VerticalContentAlignment="Center"
+                   Foreground="WhiteSmoke" FontSize="30"
+                   FontFamily="sanserif" FontWeight="Bold"
+                   MouseDown="HomeLable"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" >
+            <StackPanel Orientation="Horizontal" Margin="0,0,10,0">
+                <fa:ImageAwesome Icon="Search"
+                                 Foreground="#D3D3D3"
+                                 Width="25" Height="25"/>
+                <Label Content="Check Availability" VerticalAlignment="Center"
+                       Foreground="WhiteSmoke" FontSize="17"
+                       FontFamily="sanserif" Margin="10,0,0,0"
+                       MouseDown="AvailabilityLable"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,10,0">
+                <fa:ImageAwesome Icon="CalendarCheckOutline"
+                                 Foreground="#D3D3D3"
+                                 Width="25" Height="25"/>
+                <Label Content="My Reservations" VerticalAlignment="Center"
+                       Foreground="WhiteSmoke" FontSize="17"
+                       FontFamily="sanserif" Margin="10,0,0,0"
+                       MouseDown="MyreservationLable"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <fa:ImageAwesome Icon="QuestionCircle"
+                                 Foreground="#D3D3D3"
+                                 Width="25" Height="25"/>
+                <Label Content="Help/Info" VerticalAlignment="Center"
+                       Foreground="WhiteSmoke" FontSize="17"
+                       FontFamily="sanserif" Margin="10,0,0,0"
+                       MouseDown="HelpInfoLable"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2" Margin="0,0,10,0">
+            <Border CornerRadius="20">
+                <Button Content="Logout" Width="120" Height="40"
+                        Background="White" Foreground="#355167"
+                        BorderBrush="Transparent" FontWeight="Bold"
+                        FontSize="16" HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Click="LogoutBtn"/>
+            </Border>
+        </StackPanel>
+    </Grid>
+</UserControl>

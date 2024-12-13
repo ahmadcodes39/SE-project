@@ -1,0 +1,59 @@
+CREATE TABLE Users (
+    --UserId INT IDENTITY(1,1) PRIMARY KEY,
+    UserName NVARCHAR(50) NOT NULL,
+    Password NVARCHAR(255) NOT NULL,  -- Increased size for password hash
+    Email NVARCHAR(50) PRIMARY KEY NOT NULL,
+    Phone NVARCHAR(15) NOT NULL,  -- Adjusted size for phone numbers
+    RegistrationDate DATETIME DEFAULT GETDATE()   -- Corrected date default
+);
+CREATE TABLE ParkingSpot (
+    SpotId INT IDENTITY(1,1) PRIMARY KEY,
+    Location NVARCHAR(255) NOT NULL,
+    SpotType NVARCHAR(100) NOT NULL DEFAULT 'Regular',  -- Corrected to single quotes
+    SpotStatus BIT NOT NULL   -- Corrected BOOLEAN to BIT
+);
+
+CREATE TABLE Reservation {
+    ReservationId INT IDENTITY(1,1) PRIMARY KEY,
+    StartTime DATETIME DEFAULT GETDATE() NOT NULL,
+    EndTime DATETIME NOT NULL,
+    TotalCost INT,
+    ReservationStatus NVARCHAR(20) NOT NULL DEFAULT 'Pending',
+    ReservationDate DATETIME DEFAULT GETDATE(),
+    
+    -- Foreign Key Columns
+    UserId INT,  -- Column for UserId foreign key
+    SpotId INT,  -- Column for SpotId foreign key
+    
+    -- Foreign Key Constraints
+    FOREIGN KEY (UserId) REFERENCES Users(UserId) ON DELETE CASCADE,
+    FOREIGN KEY (SpotId) REFERENCES ParkingSpot(SpotId) ON DELETE CASCADE
+};
+
+CREATE TABLE Payments {
+    PaymentID INT IDENTITY(1,1) PRIMARY KEY,
+    ReservationID INT,
+    UserId INT, -- Reference to the User who made the payment
+    PaymentAmount INT,
+    PaymentMethod NVARCHAR(50), -- e.g., Credit Card, PayPal, etc.
+    PaymentStatus NVARCHAR(20) DEFAULT 'Pending', -- e.g., pending, successful, failed
+    PaymentDate DATETIME DEFAULT GETDATE(),
+    -- Foreign Key Constraints
+    FOREIGN KEY (ReservationID) REFERENCES Reservation(ReservationId),
+    FOREIGN KEY (UserId) REFERENCES Users(UserId)
+}
+
+CREATE TABLE PaymentMethods {
+    PaymentMethodID INT IDENTITY(1,1) PRIMARY KEY,
+    PaymentMethodName NVARCHAR(50) NOT NULL
+}
+
+CREATE TABLE Admins {
+    AdminId INT IDENTITY(1,1) PRIMARY KEY,
+    Name NVARCHAR(50) NOT NULL,
+    Email NVARCHAR(30) NOT NULL,
+    Password NVARCHAR(255) NOT NULL,
+    CreatedAt DATETIME DEFAULT GETDATE(),
+}
+
+

@@ -1,0 +1,114 @@
+﻿<UserControl x:Class="ParkingSpace.Components.MyReservations"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ParkingSpace.Components"
+             mc:Ignorable="d" 
+             xmlns:fa="clr-namespace:FontAwesome.WPF;assembly=FontAwesome.WPF"
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <Grid Background="#F0F4F8">
+
+        <Border Background="#263B47" Height="60" VerticalAlignment="Top">
+            <DockPanel VerticalAlignment="Center" Margin="0,-10,0,0">
+                <fa:ImageAwesome Icon="CalendarCheckOutline" Width="30" Height="30"
+                                 Foreground="White" Margin="10,0" />
+                <TextBlock Text="My Reservations" Foreground="White" FontSize="22" 
+                           FontWeight="Bold" VerticalAlignment="Center" Margin="5,0" />
+            </DockPanel>
+        </Border>
+
+            <Grid Margin="20,60,20,20">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="1" Orientation="Vertical">
+                    <TextBlock Text="Current Reservations" FontSize="18" FontWeight="Bold" 
+                               Margin="0,0,0,10" Foreground="#355167" HorizontalAlignment="Center" />
+
+                    <DataGrid Name="currentGrid"
+                              AutoGenerateColumns="False" 
+                              Margin="5" 
+                              BorderBrush="#355167" BorderThickness="1" 
+                              AlternatingRowBackground="#E8EEF3" 
+                              Background="White" 
+                              FontSize="14" 
+                              Height="200"
+                              RowHeight="30" 
+                              CanUserAddRows="False"
+                              HorizontalAlignment="Stretch">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Spot Location" Binding="{Binding Location}" Width="*" />
+                            <DataGridTextColumn Header="Start Time"  Binding="{Binding StartTime, StringFormat='MMM dd, yyyy hh:mm tt'}" Width="*" />
+                            <DataGridTextColumn Header="End Time" Binding="{Binding EndTime, StringFormat='MMM dd, yyyy hh:mm tt'}" Width="*" />
+                            <DataGridTextColumn Header="Total Cost" Binding="{Binding TotalCost, StringFormat='{}{0} PKR'}" Width="*" />
+                        <DataGridTextColumn Header="Remaining Time" Binding="{Binding RemainingTime}" Width="*"/>
+                        <DataGridTemplateColumn Header="Status/Action" Width="auto" >
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                    <StackPanel Orientation="Horizontal" Width="auto" >
+                                        <Button Content="Cancel"
+                                                Background="IndianRed"
+                                                Foreground="white"
+                                                Tag="{Binding}" 
+                                                Width="80"  
+                                                Padding="03,02,03,02"
+                                                FontSize="16"
+                                                Click="CancelBtn"
+                                                VerticalAlignment="Center" />
+                                       <Button Content="View"
+                                                Background="#355167"
+                                                Foreground="white"
+                                                Tag="{Binding}" 
+                                                Width="80"  
+                                                Padding="03,02,03,02"
+                                                FontSize="16"
+                                                Click="viewBtn"
+                                                VerticalAlignment="Center" />
+                                      
+                                    </StackPanel>
+
+                                </DataTemplate>
+                                    
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </StackPanel>
+
+               
+                <StackPanel Grid.Row="2" Orientation="Vertical">
+                    <TextBlock Text="Past Reservations" FontSize="18" FontWeight="Bold" 
+                               Margin="0,0,0,10" Foreground="#355167" HorizontalAlignment="Center" />
+
+                    <DataGrid Name="pastGrid" 
+                              AutoGenerateColumns="False" 
+                              Margin="5" 
+                              Height="200"
+                              BorderBrush="#355167" BorderThickness="1" 
+                              AlternatingRowBackground="#E8EEF3" 
+                              Background="White" 
+                              FontSize="14" 
+                              RowHeight="30" 
+                              CanUserAddRows="False" 
+                              HorizontalAlignment="Stretch">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Spot Location" Binding="{Binding Location}" Width="*" />
+                            <DataGridTextColumn Header="Start Time" Binding="{Binding StartTime, StringFormat='MMM dd, yyyy hh:mm tt'}" Width="*" />
+                            <DataGridTextColumn Header="End Time" Binding="{Binding EndTime, StringFormat='MMM dd, yyyy hh:mm tt'}" Width="*" />
+                            <DataGridTextColumn Header="Duration" Binding="{Binding Duration}" Width="*" />
+                            <DataGridTextColumn Header="Cost" Binding="{Binding TotalCost, StringFormat='{}{0} PKR'}" Width="*" />
+                            <DataGridTextColumn Header="Status" Binding="{Binding ReservationStatus}" Width="*" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </StackPanel>
+
+            </Grid>
+
+    </Grid>
+</UserControl>
