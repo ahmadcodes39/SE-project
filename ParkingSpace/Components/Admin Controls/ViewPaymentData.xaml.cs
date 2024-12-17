@@ -26,11 +26,33 @@ namespace ParkingSpace.Components.Admin_Controls
         {
             InitializeComponent();
             LoadData();
+            SpotLocationFilter.TextChanged += FilterData;
         }
         private void LoadData()
         {
             List<ParkingSpotReservationViewModel> paymentDataList = BL.ViewPaymentData();
             paymentData.ItemsSource = paymentDataList;
         }
+        private void FilterData(object sender, EventArgs e)
+        {
+            var filterData = ps.Where(item =>
+            (
+                string.IsNullOrEmpty(SpotLocationFilter.Text) || item.Location.Contains(SpotLocationFilter.Text)
+            ) &&
+            (
+                SectionFilter.SelectedItem == null ||
+               ((ComboBoxItem)SectionFilter.SelectedItem).Content.ToString() == "All" ||
+               ((ComboBoxItem)SectionFilter.SelectedItem).Content.ToString() == item.Section
+            ) &&
+            (
+                LevelFilter.SelectedItem == null ||
+                ((ComboBoxItem)LevelFilter.SelectedItem).Content.ToString() == "All" ||
+                ((ComboBoxItem)LevelFilter.SelectedItem).Content.ToString() == item.Level
+            )
+            ).ToList();
+
+            ParkingStatusDatagrid.ItemsSource = filterData;
+        }
+
     }
 }

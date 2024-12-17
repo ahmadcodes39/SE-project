@@ -20,6 +20,22 @@
         </Border>
 
         <StackPanel Margin="10,70,10,10">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <StackPanel>
+                    <Label Content="Spot Location" HorizontalAlignment="Center"/>
+                    <TextBox Name="SpotLocationFilter"
+                          Width="150" Margin="5" />
+                </StackPanel>
+            <StackPanel>
+                <Label Content="Level" HorizontalAlignment="Center"/>
+                    <ComboBox Name="StatusComboBox"  Width="150" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <ComboBoxItem Content="Complete" />
+                        <ComboBoxItem Content="Cancel" />
+                        <ComboBoxItem Content="All" />
+                    </ComboBox>
+                </StackPanel>
+            </StackPanel>
+
             <DataGrid Height="400" Name="paymentData" AutoGenerateColumns="False"
                       HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                       BorderBrush="#355167" BorderThickness="1" 
