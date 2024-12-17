@@ -84,8 +84,6 @@ namespace ParkingSpace.Components
             ParkingStatusDatagrid.ItemsSource = filterData;
         }
 
-
-
         private void viewBtn(object sender, RoutedEventArgs e)
         {
             Button btn = (Button)sender;

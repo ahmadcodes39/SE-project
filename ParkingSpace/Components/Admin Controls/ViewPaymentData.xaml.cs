@@ -3,17 +3,8 @@ using ParkingSpace.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace ParkingSpace.Components.Admin_Controls
 {
@@ -22,37 +13,38 @@ namespace ParkingSpace.Components.Admin_Controls
     /// </summary>
     public partial class ViewPaymentData : UserControl
     {
+        private List<ParkingSpotReservationViewModel> paymentDataList;
+
         public ViewPaymentData()
         {
             InitializeComponent();
             LoadData();
+
+            // Event handlers for filters
             SpotLocationFilter.TextChanged += FilterData;
+            StatusComboBox.SelectionChanged += FilterData;
         }
+
         private void LoadData()
         {
-            List<ParkingSpotReservationViewModel> paymentDataList = BL.ViewPaymentData();
+            // Fetch data from the business layer
+            paymentDataList = BL.ViewPaymentData();
             paymentData.ItemsSource = paymentDataList;
         }
+
         private void FilterData(object sender, EventArgs e)
         {
-            var filterData = ps.Where(item =>
+            var filterData = paymentDataList.Where(item =>
             (
                 string.IsNullOrEmpty(SpotLocationFilter.Text) || item.Location.Contains(SpotLocationFilter.Text)
             ) &&
             (
-                SectionFilter.SelectedItem == null ||
-               ((ComboBoxItem)SectionFilter.SelectedItem).Content.ToString() == "All" ||
-               ((ComboBoxItem)SectionFilter.SelectedItem).Content.ToString() == item.Section
-            ) &&
-            (
-                LevelFilter.SelectedItem == null ||
-                ((ComboBoxItem)LevelFilter.SelectedItem).Content.ToString() == "All" ||
-                ((ComboBoxItem)LevelFilter.SelectedItem).Content.ToString() == item.Level
-            )
-            ).ToList();
+                StatusComboBox.SelectedItem == null ||
+                ((ComboBoxItem)StatusComboBox.SelectedItem).Content.ToString() == "All" ||
+                ((ComboBoxItem)StatusComboBox.SelectedItem).Content.ToString() == item.ReservationStatus
+            )).ToList();
 
-            ParkingStatusDatagrid.ItemsSource = filterData;
+            paymentData.ItemsSource = filterData;
         }
-
     }
 }
