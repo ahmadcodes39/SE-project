@@ -32,7 +32,7 @@
                 <Label Content="Dashboard" VerticalAlignment="Center"
                       Foreground="WhiteSmoke" FontSize="17"
                       FontFamily="sanserif" Margin="10,0,0,0"
-                       
+                       Name="dashboardLabel"
                       Cursor="Hand" MouseDown="Label_Dashboard"/>
             </StackPanel>
 
@@ -43,7 +43,8 @@
                 <Label Content="Add Parking Spot" VerticalAlignment="Center"
                       Foreground="WhiteSmoke" FontSize="17"
                       FontFamily="sanserif" Margin="10,0,0,0"
-                      Cursor="Hand" MouseDown="Label_AddSpot"/>
+                      Cursor="Hand" MouseDown="Label_AddSpot"
+                       Name="parkingSpotLabel"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
@@ -53,7 +54,8 @@
                 <Label Content="View Payments" VerticalAlignment="Center"
                       Foreground="WhiteSmoke" FontSize="17"
                       FontFamily="sanserif" Margin="10,0,0,0"
-                     Cursor="Hand" MouseDown="Label_Payment"/>
+                     Cursor="Hand" MouseDown="Label_Payment"
+                       Name="viewPaymentLabel"/>
             </StackPanel>
         </StackPanel>
 
@@ -64,7 +66,8 @@
                        BorderBrush="Transparent" FontWeight="Bold"
                        FontSize="16" HorizontalAlignment="Center"
                        VerticalAlignment="Center"
-                      Click="LogoutBtn"/>
+                        Name="logoutBtn"
+                       Click="LogoutBtn"/>
             </Border>
         </StackPanel>
     </Grid>

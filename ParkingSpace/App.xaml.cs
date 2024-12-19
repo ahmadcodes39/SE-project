@@ -13,8 +13,8 @@ namespace ParkingSpace
     /// </summary>
     public partial class App : Application
     {
-        public static bool IsLoggedIn { get; set; } = true;
-        public static bool AdminLogin { get; set; } = true;
+        public static bool IsLoggedIn { get; set; } = false;
+        public static bool AdminLogin { get; set; } = false;
         public static int userId { get; set; } = -1;
         public static string userEmail { get; set; }
     }

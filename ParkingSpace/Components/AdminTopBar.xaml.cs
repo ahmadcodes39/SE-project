@@ -27,37 +27,66 @@ namespace ParkingSpace.Components
 
         private void Label_Dashboard(object sender, MouseButtonEventArgs e)
         {
-            AdminDashboard adminDashboard = new AdminDashboard();
-            var mainWindow = Window.GetWindow(this) as MainWindow;
-            if (mainWindow != null)
+            if (App.AdminLogin==false)
             {
-                mainWindow.MainContent.Content = adminDashboard;
+                MessageBox.Show("You First have to Login to access Dashboard", "Login Required", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            else
+            {
+                AdminDashboard adminDashboard = new AdminDashboard();
+                var mainWindow = Window.GetWindow(this) as MainWindow;
+                if (mainWindow != null)
+                {
+                    mainWindow.MainContent.Content = adminDashboard;
+                }
             }
         }
 
         private void Label_AddSpot(object sender, MouseButtonEventArgs e)
         {
-            AddParkingSpot addParkingSpot = new AddParkingSpot();
-            var mainWindow = Window.GetWindow(this) as MainWindow;
-            if (mainWindow!=null)
+            if (App.AdminLogin == false)
             {
-                mainWindow.MainContent.Content = addParkingSpot;
+                MessageBox.Show("You First have to Login to Add Sport", "Login Required", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            else
+            {
+                AddParkingSpot addParkingSpot = new AddParkingSpot();
+                var mainWindow = Window.GetWindow(this) as MainWindow;
+                if (mainWindow != null)
+                {
+                    mainWindow.MainContent.Content = addParkingSpot;
+                }
             }
         }
 
         private void Label_Payment(object sender, MouseButtonEventArgs e)
         {
-            ViewPaymentData data = new ViewPaymentData();
-            var mainWindow = Window.GetWindow(this) as MainWindow;
-            if (mainWindow!=null)
+            if (App.AdminLogin == false)
             {
-                mainWindow.MainContent.Content = data;
+                MessageBox.Show("You First have to Login to access Payment Page", "Login Required", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            else
+            {
+                ViewPaymentData data = new ViewPaymentData();
+                var mainWindow = Window.GetWindow(this) as MainWindow;
+                if (mainWindow != null)
+                {
+                    mainWindow.MainContent.Content = data;
+                }
             }
         }
 
         private void LogoutBtn(object sender, RoutedEventArgs e)
         {
+            if (App.AdminLogin == false)
+            {
+                MessageBox.Show("You First have to Login ", "Login Required", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            else
+            {
 
-        }
+            }
+
+            }
     }
 }
