@@ -1,6 +1,9 @@
 ﻿using ParkingSpace.BusinessLayer;
-using ParkingSpace.fonts;
-using ParkingSpace.Models;
+//using ParkingSpace.fonts;
+
+//using ParkingSpace.fonts;
+//using ParkingSpace.Models;
+using Shared.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

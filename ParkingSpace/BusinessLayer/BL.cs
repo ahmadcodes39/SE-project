@@ -1,36 +1,36 @@
 ﻿using ParkingSpace.DataAccessLayer;
-using ParkingSpace.fonts;
-using ParkingSpace.Models;
+//using ParkingSpace.fon;
+using Shared.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Security.Policy;
+//using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Documents;
+//using System.Windows.Documents;
 
 namespace ParkingSpace.BusinessLayer
 {
     internal class BL
     {
-        public static bool RegisterUser(Users obj)
-        {
-            DAL dAL = new DAL();
-            return dAL.registerUser(obj);
-        }
+        //public static bool RegisterUser(Users obj)
+        //{
+        //    DAL dAL = new DAL();
+        //    return dAL.registerUser(obj);
+        //}
 
-        public static bool CheckIfUserExists(string email)
-        {
-            DAL dAL = new DAL();
-            return dAL.IsUserExists(email);
-        }
+        //public static bool CheckIfUserExists(string email)
+        //{
+        //    DAL dAL = new DAL();
+        //    return dAL.IsUserExists(email);
+        //}
 
-        public static Users ValidateLogin(string email, string password)
-        {
-            DAL dal = new DAL();
-            return dal.CheckLoginCredentials(email, password);
-        }
+        //public static Users ValidateLogin(string email, string password)
+        //{
+        //    DAL dal = new DAL();
+        //    return dal.CheckLoginCredentials(email, password);
+        //}
 
         public static List<ParkingSpot> GetAllParkingSpots()
         {

@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
-//using PMS_WCF_Service.
+using Shared.Models;
 namespace PMS_WCF_Service
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService1" in both code and config file together.
@@ -20,6 +20,11 @@ namespace PMS_WCF_Service
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
         // TODO: Add your service operations here
+        bool RegisterUser(Users obj);
+        [OperationContract]
+        Users ValidateLogin(string email, string password);
+        [OperationContract]
+        bool CheckIfUserExists(string email);
     }
 
 

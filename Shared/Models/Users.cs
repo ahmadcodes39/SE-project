@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ParkingSpace.Models
+namespace Shared.Models
 {
-    internal class Users
+    public class Users
     {
 		private int id;
 		private string email;

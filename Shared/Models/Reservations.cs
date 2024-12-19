@@ -1,9 +1,9 @@
 ﻿using System;
 using System.ComponentModel;
 
-namespace ParkingSpace.Models
+namespace Shared.Models
 {
-    internal class Reservations : INotifyPropertyChanged
+    public class Reservations : INotifyPropertyChanged
     {
         private int id;
         private DateTime startTime;

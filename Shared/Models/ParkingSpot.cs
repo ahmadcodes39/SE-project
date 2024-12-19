@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ParkingSpace.fonts
+namespace Shared.Models
 {
-    internal class ParkingSpot
+    public class ParkingSpot
     {
 		private int spotId;
 		private string location;

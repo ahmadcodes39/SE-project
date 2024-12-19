@@ -107,7 +107,7 @@ CREATE TABLE Payments (
 );
 --select * from Payments
 --select * from Reservation where SpotId=14
---select * from ParkingSpot where SpotId = 14
+select * from ParkingSpot where SpotId = 14
 -- Admins Table
 CREATE TABLE Admins (
     AdminId INT IDENTITY(1,1) PRIMARY KEY,

@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
-using ParkingSpace.Models;
+using Shared.Models;
 using System.Windows.Media;
 using System.Windows;
-using ParkingSpace.fonts;
+//using ParkingSpace.fonts;
 using System.Collections.ObjectModel;
 using ControlzEx.Standard;
 using System.Net.Mail;
@@ -64,14 +64,14 @@ namespace ParkingSpace.DataAccessLayer
                         cmd.Parameters.AddWithValue("@Email", email);
 
                         int userCount = (int)cmd.ExecuteScalar();
-                        return userCount > 0; 
+                        return userCount > 0;
                     }
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
-                return false; 
+                return false;
             }
         }
 
@@ -94,18 +94,18 @@ namespace ParkingSpace.DataAccessLayer
                             {
                                 Users user = new Users
                                 {
-                                    ID = (int)reader["UserId"], 
+                                    ID = (int)reader["UserId"],
                                     Email = reader["Email"].ToString(),
                                     Name = reader["UserName"].ToString(),
                                     Password = reader["Password"].ToString(),
                                     Phone = reader["Phone"].ToString(),
                                     RegistrationDate = (DateTime)reader["RegistrationDate"]
                                 };
-                                return user; 
+                                return user;
                             }
                             else
                             {
-                                return null; 
+                                return null;
                             }
                         }
                     }
@@ -113,7 +113,7 @@ namespace ParkingSpace.DataAccessLayer
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message, "Database Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                    return null; 
+                    return null;
                 }
             }
         }
@@ -166,7 +166,7 @@ namespace ParkingSpace.DataAccessLayer
                     conn.Open();
 
                     string query = "INSERT INTO Reservation (StartTime, EndTime, TotalCost, ReservationStatus, UserId, SpotId) " +
-                                   "OUTPUT INSERTED.ReservationId, INSERTED.SpotId " +  
+                                   "OUTPUT INSERTED.ReservationId, INSERTED.SpotId " +
                                    "VALUES (@start, @end, @cost, @status, @userId, @spotId)";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
@@ -174,17 +174,17 @@ namespace ParkingSpace.DataAccessLayer
                         cmd.Parameters.AddWithValue("@start", obj.StartTime);
                         cmd.Parameters.AddWithValue("@end", obj.EndTime);
                         cmd.Parameters.AddWithValue("@cost", obj.TotalCost);
-                        cmd.Parameters.AddWithValue("@status",obj.ReservationStatus);
+                        cmd.Parameters.AddWithValue("@status", obj.ReservationStatus);
                         cmd.Parameters.AddWithValue("@userId", obj.UserId);
                         cmd.Parameters.AddWithValue("@spotId", obj.SpotId);
 
-                       
+
                         using (var reader = cmd.ExecuteReader())
                         {
                             if (reader.Read())
                             {
-                                int reservationId = reader.GetInt32(0); 
-                                int spotId = reader.GetInt32(1); 
+                                int reservationId = reader.GetInt32(0);
+                                int spotId = reader.GetInt32(1);
                                 return (reservationId, spotId);
                             }
                         }
@@ -195,16 +195,16 @@ namespace ParkingSpace.DataAccessLayer
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Database Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                return (0, 0); 
+                return (0, 0);
             }
         }
-            
-        public List<Dictionary<string,object>> getPastReservations(int UserId)
+
+        public List<Dictionary<string, object>> getPastReservations(int UserId)
         {
             List<Dictionary<string, object>> pastReservations = new List<Dictionary<string, object>>();
             try
             {
-                using(SqlConnection connection = new SqlConnection(connectionString))
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
                     string query = @"
@@ -252,12 +252,12 @@ namespace ParkingSpace.DataAccessLayer
                 return null;
             }
         }
-        public List<Dictionary<string,object>> getCurrentReservations(int UserId)
+        public List<Dictionary<string, object>> getCurrentReservations(int UserId)
         {
             List<Dictionary<string, object>> currentReservations = new List<Dictionary<string, object>>();
             try
             {
-                using(SqlConnection connection = new SqlConnection(connectionString))
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
                     string query = @"
@@ -277,7 +277,7 @@ namespace ParkingSpace.DataAccessLayer
                                     WHERE r.ReservationStatus = 'Active' 
                                         AND r.EndTime > GETDATE()
                                         AND u.UserId = @UserId";
-    
+
 
 
                     using (SqlCommand cmd = new SqlCommand(query, connection))
@@ -396,7 +396,7 @@ namespace ParkingSpace.DataAccessLayer
             }
         }
 
-        public bool UpdateReservationStatus(int reservationId,string status)
+        public bool UpdateReservationStatus(int reservationId, string status)
         {
             try
             {
@@ -404,7 +404,7 @@ namespace ParkingSpace.DataAccessLayer
                 {
                     conn.Open();
                     string query = "UPDATE Reservation SET ReservationStatus = @status WHERE ReservationId = @reservationId";
-                    using(SqlCommand cmd = new SqlCommand(query,conn))
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@reservationId", reservationId);
                         cmd.Parameters.AddWithValue("@status", status);
@@ -539,9 +539,9 @@ namespace ParkingSpace.DataAccessLayer
             List<ParkingSpotReservationViewModel> spotList = new List<ParkingSpotReservationViewModel>();
             try
             {
-                using(SqlConnection connection = new SqlConnection(connectionString))
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    
+
                     connection.Open();
                     string query = @"
                         select ( p.Location + '-' + p.Section + '-' + p.Level)  AS SpotLocation,
@@ -558,7 +558,7 @@ namespace ParkingSpace.DataAccessLayer
                         AND r.EndTime > GETDATE()
                         AND P.SpotStatus = 'Reserved'";
 
-                    using(SqlCommand command = new SqlCommand(query, connection))
+                    using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@location", location);
 
@@ -680,15 +680,15 @@ namespace ParkingSpace.DataAccessLayer
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Database Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                return 0;  
+                return 0;
             }
         }
 
-        public bool ExtendReservation(int reservationId,int userId,DateTime startTime,DateTime endTime)
+        public bool ExtendReservation(int reservationId, int userId, DateTime startTime, DateTime endTime)
         {
             try
             {
-                using(SqlConnection conn=new SqlConnection(connectionString))
+                using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
                     string query = @"UPDATE Reservation
@@ -706,8 +706,8 @@ namespace ParkingSpace.DataAccessLayer
                         cmd.Parameters.AddWithValue("@startTime", startTime);
                         cmd.Parameters.AddWithValue("@endTime", endTime);
 
-                       int roeAffected =  cmd.ExecuteNonQuery();
-                       return roeAffected > 0;
+                        int roeAffected = cmd.ExecuteNonQuery();
+                        return roeAffected > 0;
                     }
                 }
             }
@@ -731,9 +731,9 @@ namespace ParkingSpace.DataAccessLayer
                     {
                         cmd.Parameters.AddWithValue("@spotLocation", spotLocation);
 
-                        int count = (int)cmd.ExecuteScalar(); 
+                        int count = (int)cmd.ExecuteScalar();
 
-                        
+
                         return count > 0;
                     }
                 }
@@ -775,7 +775,7 @@ namespace ParkingSpace.DataAccessLayer
         {
             try
             {
-          
+
                 string query = "SELECT COUNT(*) FROM Admins WHERE Email = @Email AND Password = @Password";
 
                 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -814,7 +814,7 @@ namespace ParkingSpace.DataAccessLayer
                                         from Reservation as r
                                         INNER JOIN Users as u ON u.UserId = r.UserId
                                         INNER JOIN ParkingSpot as p on p.SpotId = r.SpotId";
-                    using(SqlCommand cmd = new SqlCommand(query,conn))
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         SqlDataReader reader = cmd.ExecuteReader();
                         while (reader.Read())
@@ -841,7 +841,7 @@ namespace ParkingSpace.DataAccessLayer
                 return null;
             }
         }
-        
+
         public DashboardData GetDashboardData()
         {
             DashboardData data = null;
@@ -875,7 +875,7 @@ namespace ParkingSpace.DataAccessLayer
                         }
                     }
                 }
-                    return data;
+                return data;
 
             }
             catch (Exception ex)
@@ -891,7 +891,7 @@ namespace ParkingSpace.DataAccessLayer
             try
             {
                 Random random = new Random();
-                string otp = random.Next(100000, 999999).ToString(); 
+                string otp = random.Next(100000, 999999).ToString();
                 DateTime expiryTime = DateTime.Now.AddMinutes(10);
 
                 string query = "UPDATE Users SET ResetToken = @ResetToken, ResetTokenExpiry = @ResetTokenExpiry WHERE Email = @Email";
@@ -1049,7 +1049,7 @@ namespace ParkingSpace.DataAccessLayer
                 conn.Close();
             }
         }
-        public void ConfirmPaymentEmail(string toEmail , string holderName , string cardNumber , string expiry , string cvv , double amount)
+        public void ConfirmPaymentEmail(string toEmail, string holderName, string cardNumber, string expiry, string cvv, double amount)
         {
 
             try

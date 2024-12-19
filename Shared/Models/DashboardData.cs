@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ParkingSpace.Models
+namespace Shared.Models
 {
-    internal class DashboardData
+    public class DashboardData
     {
         public int TotalUsers { get; set; }
         public int TotalSpots { get; set; }

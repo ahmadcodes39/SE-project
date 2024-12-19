@@ -1,5 +1,5 @@
 ﻿using ParkingSpace.BusinessLayer;
-using ParkingSpace.Models;
+using Shared.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -51,7 +51,9 @@ namespace ParkingSpace.Components
         {
             string email = email_txt.Text;
             string password = pass_txt.Password;
-            Users obj = BL.ValidateLogin(email, password);
+            PMS_WCF_Service.Service1 client = new PMS_WCF_Service.Service1();
+
+            Users obj = client.ValidateLogin(email, password);
             if (obj!=null)
             {
                 MessageBox.Show("Login Successful!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);

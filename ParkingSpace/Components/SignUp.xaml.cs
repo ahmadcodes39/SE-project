@@ -1,5 +1,5 @@
 ﻿using ParkingSpace.BusinessLayer;
-using ParkingSpace.Models;
+using Shared.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +15,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using PMS_WCF_Service.ServiceReference1;
+using PMS_WCF_Service;
 namespace ParkingSpace.Components
 {
     /// <summary>
@@ -86,13 +87,13 @@ namespace ParkingSpace.Components
                 Phone = phone
             };
 
-            if (BL.CheckIfUserExists(email))
+            PMS_WCF_Service.Service1 client = new PMS_WCF_Service.Service1();
+            if (client.CheckIfUserExists(email))
             {
                 MessageBox.Show("User already exists. Please log in.", "User Exists", MessageBoxButton.OK, MessageBoxImage.Information);
                 return;
             }
-
-            if (BL.RegisterUser(users))
+            if (client.RegisterUser(users))
             {
                 MessageBox.Show("User registered successfully.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
 
