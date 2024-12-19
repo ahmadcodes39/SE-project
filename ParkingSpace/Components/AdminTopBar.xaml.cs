@@ -8,6 +8,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Markup;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
@@ -84,9 +85,16 @@ namespace ParkingSpace.Components
             }
             else
             {
+                SignIn sign = new SignIn();
+                var mainWindow = Window.GetWindow(this) as MainWindow;
+                if (mainWindow != null)
+                {
+                    mainWindow.MainContent.Content = sign;
+                }
+                App.AdminLogin = false;
 
             }
 
-            }
+        }
     }
 }

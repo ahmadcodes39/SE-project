@@ -35,6 +35,18 @@ namespace ParkingSpace.Components.Admin_Controls
             {
                 MessageBox.Show("Invalid Cradentials", "Login Failed", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+            else
+            {
+                MessageBox.Show("Login Successfully", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                App.AdminLogin = true;
+                var mainWindow = Window.GetWindow(this) as MainWindow;
+                if (mainWindow != null)
+                {
+                    AdminDashboard dashboard = new AdminDashboard();
+                    mainWindow.MainContent.Content = dashboard;
+                }
+
+            }
         }
     }
 }

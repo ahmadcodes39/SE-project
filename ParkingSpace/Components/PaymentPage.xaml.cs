@@ -97,9 +97,8 @@ namespace ParkingSpace.Components
                         if (BL.UpdateSpotStatus(this.ViewModel.SpotId, "Reserved"))
                         {
                             MessageBox.Show("successfuly update the spot status to Reserved.", "succcess", MessageBoxButton.OK, MessageBoxImage.Information);
-
+                            BL.ConfirmPaymentEmail(App.userEmail, holderName_txt.Text.Trim(), ViewModel.TotalCost);
                         }
-                                              
                     }
                     else
                     {

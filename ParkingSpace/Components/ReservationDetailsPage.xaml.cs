@@ -103,7 +103,7 @@ namespace ParkingSpace.Components
             }
             if (!isSpotReservedAtAnyTime)
             {
-                 duration = endDateTime - startDateTime;
+                duration = endDateTime - startDateTime;
                 DurationTextBox.Text = duration.TotalHours.ToString("0.00") + " hours";
 
                 totalCost = duration.TotalHours * ratePerHour;
@@ -143,25 +143,39 @@ namespace ParkingSpace.Components
                     }
                     if ((BL.UpdatePayment(_updatedData.ReservationId, App.userId, TotalFare))&&(BL.UpdateReservationPayment(_updatedData.ReservationId,App.userId, TotalFare)))
                     {
-                        MessageBox.Show($"Reservation Time Extended Successfully for Spot {_updatedData.Location}\n New Start Time : {startDateTime}\n New End Time: {endDateTime}",
+                       
+                        MessageBox.Show($"Reservation Time Changed Successfully for Spot {_updatedData.Location}\n New Start Time : {startDateTime}\n New End Time: {endDateTime}",
                                     "Reservation Extended", MessageBoxButton.OK, MessageBoxImage.Information);
-
-                        var PaymentData = new ParkingSpotReservationViewModel
+                        if (totalCost>0)
                         {
-                            Location = _updatedData.Location,
-                            Duration = duration,
-                            TotalCost = updatedCost,
-                            StartTime = startDateTime,
-                            EndTime = endDateTime,
-                            ReservationId = _updatedData.ReservationId,
-                        };
+                            var PaymentData = new ParkingSpotReservationViewModel
+                            {
+                                Location = _updatedData.Location,
+                                Duration = duration,
+                                TotalCost = updatedCost,
+                                StartTime = startDateTime,
+                                EndTime = endDateTime,
+                                ReservationId = _updatedData.ReservationId,
+                            };
 
-                        PaymentPage payment = new PaymentPage(PaymentData);
-                        var mainwindow = Window.GetWindow(this) as MainWindow;
-                        if (mainwindow != null)
-                        {
-                            mainwindow.MainContent.Content = payment;
+                            PaymentPage payment = new PaymentPage(PaymentData);
+                            var mainwindow = Window.GetWindow(this) as MainWindow;
+                            if (mainwindow != null)
+                            {
+                                mainwindow.MainContent.Content = payment;
+                            }
                         }
+                        else
+                        {
+                            MyReservations reservations = new MyReservations();
+                            var mainwindow = Window.GetWindow(this) as MainWindow;
+                            if (mainwindow != null)
+                            {
+                                mainwindow.MainContent.Content = reservations;
+                            }
+                        }
+
+                       
                     }
                 }
                 else

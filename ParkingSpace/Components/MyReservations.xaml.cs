@@ -145,7 +145,7 @@ namespace ParkingSpace.Components
                     }
                     else
                     {
-                        reservation.RemainingTime = string.Empty; // No remaining time before the reservation starts
+                        reservation.RemainingTime = string.Empty; 
                     }
                 }
 

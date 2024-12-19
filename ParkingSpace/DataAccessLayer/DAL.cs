@@ -952,7 +952,6 @@ namespace ParkingSpace.DataAccessLayer
                 MessageBox.Show("Failed to send email. " + ex.Message);
             }
         }
-
         public bool VerifyOTP(string email, string enteredOTP)
         {
             try
@@ -1049,32 +1048,36 @@ namespace ParkingSpace.DataAccessLayer
                 conn.Close();
             }
         }
-        public void ConfirmPaymentEmail(string toEmail, string holderName, string cardNumber, string expiry, string cvv, double amount)
+        public void ConfirmPaymentEmail(string toEmail, string holderName, double amount)
         {
-
             try
             {
                 MailMessage mail = new MailMessage();
                 SmtpClient smtpServer = new SmtpClient("smtp.gmail.com");
 
-                mail.From = new MailAddress("ahmadcodes39@gmail.com");
+                // Use environment variables or a secure method to get credentials
+                string fromEmail = "ahmadcodes39@gmail.com";
+                string fromPassword = "kita grao itrk xxiq"; // Replace with a secure method
+
+                mail.From = new MailAddress(fromEmail);
                 mail.To.Add(toEmail);
-                mail.Subject = "Password Reset OTP";
-                mail.Body = $"Your Payment has been Done successfully\nHolder Name: {holderName}\nCardNumber: {cardNumber}\n Expiery Date: {expiry}\n CVV: {cvv} \n Payment: {amount}";
+                mail.Subject = "Spot Reservation Email";
+                mail.Body = $"Your Payment has been processed successfully.\n" +
+                            $"Holder Name: {holderName}\n" +
+                            $"Amount: ${amount}";
 
                 smtpServer.Port = 587;
-
-                smtpServer.Port = 587;
-                smtpServer.Credentials = new NetworkCredential("ahmadcodes39@gmail.com", "kita grao itrk xxiq"); // password
+                smtpServer.Credentials = new NetworkCredential(fromEmail, fromPassword);
                 smtpServer.EnableSsl = true;
 
                 smtpServer.Send(mail);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Failed to send email. " + ex.Message);
+                MessageBox.Show("Failed to send email: " + ex.Message);
             }
-
         }
     }
 }
+
+//

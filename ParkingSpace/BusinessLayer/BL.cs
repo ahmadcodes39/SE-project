@@ -168,12 +168,16 @@ namespace ParkingSpace.BusinessLayer
             DAL dAL = new DAL();
             return dAL.ViewPaymentData();
         }
-         public static DashboardData GetDashboardData()
+        public static DashboardData GetDashboardData()
         {
             DAL dAL = new DAL();
             return dAL.GetDashboardData();
         }
 
-
+        public static void ConfirmPaymentEmail(string toEmail, string holderName, double amount)
+        {
+            DAL dAL = new DAL();
+            dAL.ConfirmPaymentEmail(toEmail,holderName,amount);
+        }
     }
 }

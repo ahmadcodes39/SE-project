@@ -28,7 +28,7 @@ namespace ParkingSpace.Components
         {
             if (!App.IsLoggedIn)
             {
-                MessageBox.Show("You must log in before adding donor information.", "Login Required", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("You must Login before checking available spots .", "Login Required", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
             else
             {
@@ -45,7 +45,7 @@ namespace ParkingSpace.Components
         {
             if (!App.IsLoggedIn)
             {
-                MessageBox.Show("You must log in to add patient information.", "Login Required", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("You must Login to first to Reserve a spot.", "Login Required", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
             else
             {
@@ -62,7 +62,7 @@ namespace ParkingSpace.Components
         {
             if (!App.IsLoggedIn)
             {
-                MessageBox.Show("You must log in to access My Reservation information.", "Login Required", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("You must Login to access My Reservation information.", "Login Required", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
             else
             {
@@ -79,7 +79,7 @@ namespace ParkingSpace.Components
         {
             if (!App.IsLoggedIn)
             {
-                MessageBox.Show("You must log in to view the patient list.", "Login Required", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("You must Login first.", "Login Required", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
             else
             {
@@ -90,33 +90,41 @@ namespace ParkingSpace.Components
                     mainWindow.MainContent.Content = help;
                 }
             }
+            
         }
 
-        private void HomeLable(object sender, MouseButtonEventArgs e)
+        private void HomeLable(object sender, RoutedEventArgs e)
         {
             if (!App.IsLoggedIn)
             {
-                MessageBox.Show("You must log in to view all stats.", "Login Required", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("You must Login first.", "Login Required", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
             else
             {
                 var mainWindow = Window.GetWindow(this) as MainWindow;
                 if (mainWindow != null)
                 {
-                    CheckAvailability checkAvailability = new CheckAvailability();
-                    mainWindow.MainContent.Content = checkAvailability;
+                   
+                    CheckAvailability availability = new CheckAvailability();
+                    mainWindow.MainContent.Content = availability;
                 }
             }
-
-        }
-
+        } 
         private void LogoutBtn(object sender, RoutedEventArgs e)
         {
-            var mainWindow = MainWindow.GetWindow(this) as MainWindow;
-            if (mainWindow != null)
+            if (!App.IsLoggedIn)
             {
-                SignIn signIn = new SignIn();
-                mainWindow.MainContent.Content = signIn;
+                MessageBox.Show("You must Login first.", "Login Required", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            else
+            {
+                var mainWindow = Window.GetWindow(this) as MainWindow;
+                if (mainWindow != null)
+                {
+                    App.IsLoggedIn = false;
+                    SignIn signIn = new SignIn();
+                    mainWindow.MainContent.Content = signIn;
+                }
             }
         }
     }
