@@ -143,3 +143,9 @@ SELECT
     (SELECT COUNT(*) FROM Reservation WHERE ReservationStatus = 'Cancelled') AS TotalCancelReservations;
 
 	select * from Reservation
+	 select   u.UserName,
+		                                (p.Location + '-' + p.Section + '-' + p.Level) as SpotLocation,
+		                                r.StartTime , r.EndTime,r.TotalCost,r.ReservationStatus
+                                        from Reservation as r
+                                        INNER JOIN Users as u ON u.UserId = r.UserId
+                                        INNER JOIN ParkingSpot as p on p.SpotId = r.SpotId
