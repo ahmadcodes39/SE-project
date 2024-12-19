@@ -221,14 +221,14 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\DAL.cs" />
-    <Compile Include="Models\DashboardData.cs" />
-    <Compile Include="Models\ParkingSpot.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\DashboardData.cs" />
+    <Compile Include="Models\ParkingSpot.cs" />
     <Compile Include="Models\ParkingSpotReservationViewModel.cs" />
     <Compile Include="Models\Payments.cs" />
     <Compile Include="Models\Reservations.cs" />
@@ -294,6 +294,12 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\ServiceReference1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PMS_WCF_Service\PMS_WCF_Service.csproj">
+      <Project>{3663c96a-76e9-415a-a735-d8cdb5f70b2c}</Project>
+      <Name>PMS_WCF_Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

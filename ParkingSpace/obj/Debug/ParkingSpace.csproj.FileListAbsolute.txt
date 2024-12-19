@@ -1,18 +1,64 @@
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\bin\Debug\ParkingSpace.exe.config
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\bin\Debug\ParkingSpace.exe
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\bin\Debug\ParkingSpace.pdb
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\bin\Debug\ControlzEx.dll
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\bin\Debug\FontAwesome.WPF.dll
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\bin\Debug\MahApps.Metro.dll
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\bin\Debug\Microsoft.Xaml.Behaviors.dll
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\bin\Debug\ControlzEx.pdb
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\bin\Debug\ControlzEx.xml
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\bin\Debug\FontAwesome.WPF.xml
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\bin\Debug\MahApps.Metro.pdb
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\bin\Debug\MahApps.Metro.xml
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\bin\Debug\Microsoft.Xaml.Behaviors.xml
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\bin\Debug\de\MahApps.Metro.resources.dll
 D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\ParkingSpace.csproj.AssemblyReference.cache
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\Admin Controls\AddParkingSpot.baml
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\PaymentPage.baml
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\MainWindow.baml
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\Admin Controls\AddParkingSpot.g.cs
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\Admin Controls\AdminDashboard.g.cs
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\Admin Controls\AdminSignin.g.cs
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\Admin Controls\ViewPaymentData.g.cs
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\AdminTopBar.g.cs
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\BookSpot.g.cs
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\CheckAvailability.g.cs
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\ForgotPassword.g.cs
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\HelpInfo.g.cs
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\MyReservations.g.cs
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\PaymentPage.g.cs
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\ReservationDetailsPage.g.cs
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\ReserveSpot.g.cs
 D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\SideBar.g.cs
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\SignIn.g.cs
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\SignUp.g.cs
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\SuccessPage.g.cs
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\UpdatePassword.g.cs
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\ValidateOTP.g.cs
 D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\MainWindow.g.cs
 D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\App.g.cs
 D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\ParkingSpace_Content.g.cs
 D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\ParkingSpace_MarkupCompile.cache
 D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\ParkingSpace_MarkupCompile.lref
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\bin\Debug\ParkingSpace.exe.config
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\bin\Debug\ParkingSpace.exe
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\bin\Debug\ParkingSpace.pdb
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\bin\Debug\FontAwesome.WPF.dll
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\bin\Debug\FontAwesome.WPF.xml
 D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\App.baml
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\Admin Controls\AdminDashboard.baml
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\Admin Controls\AdminSignin.baml
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\Admin Controls\ViewPaymentData.baml
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\AdminTopBar.baml
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\BookSpot.baml
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\CheckAvailability.baml
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\ForgotPassword.baml
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\HelpInfo.baml
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\MyReservations.baml
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\ReservationDetailsPage.baml
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\ReserveSpot.baml
 D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\SideBar.baml
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\MainWindow.baml
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\SignIn.baml
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\SignUp.baml
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\SuccessPage.baml
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\UpdatePassword.baml
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\ValidateOTP.baml
 D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\ParkingSpace.g.resources
 D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\ParkingSpace.Properties.Resources.resources
 D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\ParkingSpace.csproj.GenerateResource.cache
@@ -20,49 +66,6 @@ D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debu
 D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\ParkingS.0DA6A204.Up2Date
 D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\ParkingSpace.exe
 D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\ParkingSpace.pdb
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\SignUp.g.cs
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\SignUp.baml
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\SignIn.g.cs
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\SignIn.baml
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\ForgotPassword.g.cs
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\UpdatePassword.g.cs
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\UpdatePassword.baml
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\ForgotPassword.baml
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\CheckAvailability.g.cs
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\CheckAvailability.baml
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\bin\Debug\ControlzEx.dll
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\bin\Debug\MahApps.Metro.dll
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\bin\Debug\Microsoft.Xaml.Behaviors.dll
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\bin\Debug\ControlzEx.pdb
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\bin\Debug\ControlzEx.xml
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\bin\Debug\MahApps.Metro.pdb
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\bin\Debug\MahApps.Metro.xml
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\bin\Debug\Microsoft.Xaml.Behaviors.pdb
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\bin\Debug\Microsoft.Xaml.Behaviors.xml
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\bin\Debug\de\MahApps.Metro.resources.dll
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\ReserveSpot.g.cs
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\ReserveSpot.baml
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\PaymentPage.baml
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\PaymentPage.g.cs
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\MyReservations.g.cs
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\MyReservations.baml
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\SuccessPage.g.cs
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\SuccessPage.baml
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\ReservationDetailsPage.g.cs
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\ReservationDetailsPage.baml
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\BookSpot.g.cs
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\BookSpot.baml
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\ValidateOTP.g.cs
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\ValidateOTP.baml
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\HelpInfo.g.cs
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\HelpInfo.baml
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\AdminTopBar.g.cs
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\AdminTopBar.baml
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\Admin Controls\AddParkingSpot.baml
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\Admin Controls\AddParkingSpot.g.cs
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\Admin Controls\AdminSignin.g.cs
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\Admin Controls\AdminSignin.baml
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\Admin Controls\AdminDashboard.g.cs
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\Admin Controls\ViewPaymentData.g.cs
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\Admin Controls\AdminDashboard.baml
-D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\Components\Admin Controls\ViewPaymentData.baml
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\bin\Debug\PMS_WCF_Service.dll
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\bin\Debug\PMS_WCF_Service.pdb
+D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\bin\Debug\PMS_WCF_Service.dll.config
