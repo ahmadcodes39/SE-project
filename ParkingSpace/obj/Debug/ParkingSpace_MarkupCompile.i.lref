@@ -1,10 +1,20 @@
-﻿
-
+﻿D:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\obj\Debug\GeneratedInternalTypeHelper.g.i.cs
+FD:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\App.xaml;;
+FD:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\Components\Admin Controls\AdminDashboard.xaml;;
+FD:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\Components\Admin Controls\AdminSignin.xaml;;
+FD:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\Components\Admin Controls\ViewPaymentData.xaml;;
+FD:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\Components\AdminTopBar.xaml;;
 FD:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\Components\BookSpot.xaml;;
 FD:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\Components\CheckAvailability.xaml;;
+FD:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\Components\ForgotPassword.xaml;;
 FD:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\Components\HelpInfo.xaml;;
 FD:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\Components\MyReservations.xaml;;
 FD:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\Components\ReservationDetailsPage.xaml;;
 FD:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\Components\ReserveSpot.xaml;;
+FD:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\Components\SideBar.xaml;;
+FD:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\Components\SignIn.xaml;;
+FD:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\Components\SignUp.xaml;;
 FD:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\Components\SuccessPage.xaml;;
+FD:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\Components\UpdatePassword.xaml;;
+FD:\University\Software Engineering\Se Project\ParkingSpace\ParkingSpace\Components\ValidateOTP.xaml;;
 
